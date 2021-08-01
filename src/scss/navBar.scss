@@ -44,6 +44,26 @@ body {
                     text-align: center;
                     margin-right: 5px;
                 }
+
+                .cartWidget {
+                    display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    background-color: #41afa7;
+                    width: 6%;
+                    margin-right: 10px;
+                    border-radius: 5px;
+
+                    img {
+                        width: 35px;
+                        padding: 5px;
+                    }
+
+                    p {
+                        color: #fff;
+                        padding: 5px 10px;
+                    }
+                }
             }
         
             .subMenu {

@@ -1,11 +1,11 @@
-import './scss/App.scss';
+import './App.scss';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return <>
     <NavBar />
-    <ItemListContainer />
+    <ItemListContainer greeting = 'Bienvenido a ' name="Retro Studios"/>
   </>
 }
 

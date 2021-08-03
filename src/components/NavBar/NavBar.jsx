@@ -1,6 +1,6 @@
-import {MenuItem, MenuSubItem} from "./MenuItems";
-import Logo from "./Logo";
-import CartWidget from "./CartWidget";
+import {MenuItem, MenuSubItem} from "./MenuItems/MenuItems";
+import Logo from "./Logo/Logo";
+import CartWidget from "./CartWidget/CartWidget";
 
 
 const NavBar = () => {

@@ -1,6 +1,12 @@
-const ItemListContainer = (props) => {
-    
-    return <h1>{props.greeting} {props.name}</h1>
+import ItemCount from "./ItemCount/ItemCount";
+
+const ItemListContainer = () => {
+
+    const handleAdd = (count) => {
+        console.log(count);
+    }
+
+    return <ItemCount stock={5} initial={1} onAdd={handleAdd}/>
 }
 
 export default ItemListContainer;

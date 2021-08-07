@@ -9,7 +9,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     }
 
     const decrease = () => {
-        if (count > 0) setCount(count-1);
+        if (count > 1) setCount(count-1);
     }
 
     return <div className='card'>

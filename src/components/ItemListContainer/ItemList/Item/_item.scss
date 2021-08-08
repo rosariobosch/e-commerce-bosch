@@ -1,26 +1,31 @@
 .card {
 
-    width: 25%;
+    width: 320px;
     padding: 20px;
     display: flex;
         flex-direction: column;
         align-items: center;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 6px;
-    margin: 5%;
+    margin: 2%;
     .product-img {
 
         width: 70%;
+        min-width: 195px;
+        min-height: 195px;
         margin-bottom: 25px;
         border-radius: 5px;
-        border: 1px solid #691727;
+        /* border: 1px solid #691727; */
+        object-fit: contain;
     }
 
-    .product-name {
+    h2 {
 
         font-size: 1em;
+        padding-top: 15px;
         padding-bottom: 15px;
     }
+
 
     .item-counter {
 
@@ -29,6 +34,7 @@
         width: 100%;
         margin-bottom: 20px;
         border: 1px solid #691727;
+        border-radius: 5px;
 
         p {
             width: 65%;

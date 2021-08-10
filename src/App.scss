@@ -1,7 +1,7 @@
-@import './components/NavBar/navBar.scss';
-@import './components/ItemListContainer/itemListContainer.scss';
-@import './components/ItemListContainer/ItemList/itemList';
-@import './components/ItemListContainer/ItemList/Item/item';
+@import './components/navBar';
+@import './components/itemListContainer';
+@import './components/itemList';
+@import './components/item';
 
 //font
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');

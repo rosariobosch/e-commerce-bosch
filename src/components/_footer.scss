@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 5%;
+    background-color: #fafafaa4;
+
+    .footer-col-1 {
+        padding: 3%;
+        h2 {
+            font-size: 1em;
+            font-weight: normal;
+        }
+    }
+
+    .footer-col-2 {
+        padding: 3%;
+        align-self: center;
+        
+        h3 {
+            font-size: 1em;
+            font-weight: normal;
+            &:first-child {
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    .footer-col-3 {
+        padding: 3%;
+        align-self: center;
+    }
+
+    img {
+        width: 55%;
+        padding-bottom: 2%;
+    }
+    
+}

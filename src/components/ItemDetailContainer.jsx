@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 
-/* let product = {} */
-
-
-
-
 const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState({})

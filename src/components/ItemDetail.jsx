@@ -1,4 +1,4 @@
-import Item from "./Item";
+
 
 const ItemDetail = ({item}) => {
 

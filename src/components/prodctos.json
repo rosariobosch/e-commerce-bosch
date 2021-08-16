@@ -1,0 +1,33 @@
+[{
+    "id":1,
+    "name":"Sintetizador Behringer Td-3-tg",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae tempore ex delectus assumenda illum aperiam possimus, totam maxime placeat cumque neque perspiciatis dolores voluptatum reprehenderit inventore soluta doloribus esse culpa.",
+    "img":"assets/imagenes/sintetizador1.png",
+    "price":22000,
+    "stock": 5
+},
+{
+    "id":2,
+    "name":"Sintetizador Digital Korg Volca Fm",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae tempore ex delectus assumenda illum aperiam possimus, totam maxime placeat cumque neque perspiciatis dolores voluptatum reprehenderit inventore soluta doloribus esse culpa.",
+    "img":"assets/imagenes/sintetizador2.png",
+    "price":24000,
+    "stock": 5
+},
+{
+    "id":3,
+    "name":"Sintetizador Digital Korg Nts1 Kit Programable",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae tempore ex delectus assumenda illum aperiam possimus, totam maxime placeat cumque neque perspiciatis dolores voluptatum reprehenderit inventore soluta doloribus esse culpa.",
+    "img":"assets/imagenes/sintetizador3.png",
+    "price":15000,
+    "stock": 5
+},
+{
+    "id":4,
+    "name":"Sintetizador Behringer Td-3-am Amarillo Analogo",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae tempore ex delectus assumenda illum aperiam possimus, totam maxime placeat cumque neque perspiciatis dolores voluptatum reprehenderit inventore soluta doloribus esse culpa.",
+    "img":"assets/imagenes/sintetizador4.png",
+    "price":30000,
+    "stock": 5
+}]
+

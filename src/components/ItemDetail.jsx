@@ -1,14 +1,14 @@
 
 
-const ItemDetail = ({item}) => {
+const ItemDetail = ({name, img, description, price}) => {
 
     return <div className='item-detail'>
 
-        <img src={item.img} alt="Imagen del producto"/>
+        <img src={img} alt="Imagen del producto"/>
         <div className='item-detail-text'>
-            <h1>{item.name}</h1>
-            <p>{item.description}</p>
-            <p>$ {item.price}</p>
+            <h1>{name}</h1>
+            <p>{description}</p>
+            <p>$ {price}</p>
         </div>
         
     </div>

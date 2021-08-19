@@ -1,14 +1,13 @@
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
-
 const Item = ({id, name, img, price}) => {
 
     const handleAdd = (count) => {
         console.log(count);
     }
 
-        return <div className='card' key={id}>
+        return <div className='card' id={id}>
             <Link to={`/item-detail/${id}`}>
             <img src={img} alt="Placeholder" className='product-img'/>
             <h2 className='product-name'>{name}</h2>

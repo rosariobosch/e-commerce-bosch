@@ -14,11 +14,11 @@ const NavBar = () => {
                 <CartWidget />
             </div>
             <div className='subMenu'>
-                <MenuSubItem name='Sintetizadores' link='sintetizadores' />
-                <MenuSubItem name='Controladores MIDI' link='controladores' />
-                <MenuSubItem name='Micrófonos' link='microfonos' />
-                <MenuSubItem name='Auriculares y monitores' link='auriculares' />
-                <MenuSubItem name='Interfaces' link='interfaces' />
+                <MenuSubItem name='Sintetizadores' category='sintetizadores' />
+                <MenuSubItem name='Controladores MIDI' category='controladores' />
+                <MenuSubItem name='Micrófonos' category='microfonos' />
+                <MenuSubItem name='Auriculares y monitores' category='auriculares' />
+                <MenuSubItem name='Interfaces' category='interfaces' />
             </div>
         </section>
         

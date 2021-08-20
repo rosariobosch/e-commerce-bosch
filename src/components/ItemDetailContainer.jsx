@@ -5,27 +5,21 @@ import data from "./productos.json";
 
 const ItemDetailContainer = ()=>{
 
-    const [producto, setProducto] = useState({})
-    const [cargando, setCargando] = useState(true)
-
+    const [producto, setProducto] = useState({}) 
     const {id} = useParams()
-    console.log(data)
 
     useEffect(()=>{
-        const productos = new Promise((resolve, reject)=>{
+        const productos = new Promise((resolve)=>{
                 setTimeout(()=>{
                     resolve(data)
-                    reject(console.log('error'))
                 },100)
             })
             
-        productos.then(()=>{
-            const producto = data.find(element => element.id === id)
-            setProducto(producto)
-            console.log(producto)
-            console.log(id)
-        })
-    },[id])
+            productos.then((value)=>{
+                const producto = value.find(element => element.id == id)
+                setProducto(producto)
+            })
+    },[])
 
 
     return (

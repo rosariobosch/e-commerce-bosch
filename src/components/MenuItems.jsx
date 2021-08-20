@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const MenuItem = (props) => {
 
@@ -6,7 +7,7 @@ const MenuItem = (props) => {
 
 const MenuSubItem = (props) => {
 
-    return <a href={props.link}>{props.name}</a>
+    return <Link to={`/category/${props.category}`}><a href={props.link}>{props.name}</a></Link>
 }
 
 export {MenuItem, MenuSubItem}

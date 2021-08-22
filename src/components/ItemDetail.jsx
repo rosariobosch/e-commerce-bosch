@@ -7,10 +7,6 @@ const ItemDetail = ({id, img, name, description, price}) => {
     const [isVisible, setIsVisible] = useState(true)
     const [itemCount, setItemCount] = useState(0)
 
-    /* const handleAdd = (count) => {
-        
-    } */
-
     const handleAdd = (count) => {
         setIsVisible(false)
         setItemCount(count)

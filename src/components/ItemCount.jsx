@@ -12,14 +12,14 @@ const ItemCount = ({stock, initial, onAdd}) => {
         if (count > 1) setCount(count-1);
     }
 
-    return  <>
-            <div className='item-counter'>
-                <button onClick={() => decrease()}>-</button>
-                <p>{count}</p>
-                <button onClick={() => increase()}>+</button>
+    return  <div className='item-counter'>
+                <div className="counter">
+                    <button onClick={() => decrease()}>-</button>
+                    <p>{count}</p>
+                    <button onClick={() => increase()}>+</button>
+                </div>               
+                <button className='cart-button' onClick={() => onAdd(count)}>Agregar al carrito</button>
             </div>
-            <button className='cart-button' onClick={() => onAdd(count)}>Agregar al carrito</button>
-            </>
 };
 
 export default ItemCount;

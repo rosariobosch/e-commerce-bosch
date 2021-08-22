@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
+import Cart from './components/Cart';
 
 function App() {
   return <BrowserRouter>
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route exact path="/category/:category">
           <ItemListContainer />
+        </Route>
+        <Route exact path="/cart">
+          <Cart />
         </Route>
       <Footer />
     </Switch>

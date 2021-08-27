@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const ItemList = ({items}) => {  
 
 
-    const { category } =useParams()
+    const { category } = useParams()
     const [productos, setProductos] = useState([])
 
     useEffect(()=>{

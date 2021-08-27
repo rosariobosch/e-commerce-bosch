@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../contexts/CartContext';
+import Cart from './Cart';
 import ItemCount from './ItemCount';
 
 const ItemDetail = ({id, img, name, description, price}) => {
@@ -7,14 +9,20 @@ const ItemDetail = ({id, img, name, description, price}) => {
     const [isVisible, setIsVisible] = useState(true)
     const [itemCount, setItemCount] = useState(0)
 
+    const [cart, setCart] = useContext(CartContext)
+
+    console.log(cart)
+
     const handleAdd = (count) => {
         setIsVisible(false)
         setItemCount(count)
+        addItem(name, itemCount)
     }
 
-    /* const handleBuy = () => {
-
-    } */
+    const addItem = (name, quantity) => {
+        const item = {name: name, quantity: quantity}
+        setCart(currentCart => [...currentCart, item])
+    }
 
     return <div className='item-detail' id={id}>
         <div className="detail">
@@ -27,10 +35,10 @@ const ItemDetail = ({id, img, name, description, price}) => {
         </div>
 
         {isVisible && <ItemCount stock={5} initial={1} onAdd={handleAdd}/>}
-        {!isVisible && <button className="cart-button buy-button" /* onClick={handleBuy} */><Link to='/cart'>Terminar mi compra</Link></button>}
-        {console.log(itemCount)}
-
+        {!isVisible && <button className="cart-button buy-button"><Link to='/cart'>Terminar mi compra</Link></button>}
+        
     </div>
+    
 }
 
 export default ItemDetail;

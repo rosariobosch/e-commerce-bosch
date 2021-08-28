@@ -1,0 +1,29 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    text-align: center;
+
+    .cart-title {
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 2%;
+        h2 {
+            width: 25%;
+        }
+
+       
+    }
+
+    .no-products {
+        padding-top: 5%;
+    }
+
+    .total {
+        width: 25%;
+        align-self: flex-end;
+        padding-top: 2%;
+    }
+}

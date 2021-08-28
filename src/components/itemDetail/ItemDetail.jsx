@@ -15,11 +15,11 @@ const ItemDetail = ({id, img, name, description, price}) => {
     const handleAdd = (count) => {
         setIsVisible(false)
         setItemCount(count)
-        addItem(name, count, price, id)
+        addItem(name, count, price, id, img)
     }
 
-    const addItem = (name, quantity, price, id) => {
-        const item = {name: name, quantity: quantity, price: price*quantity, id: id}
+    const addItem = (name, quantity, price, id, img) => {
+        const item = {name: name, quantity: quantity, price: price*quantity, id: id, img: img}
         setCart(currentCart => [...currentCart, item])
     }
 
@@ -30,7 +30,6 @@ const ItemDetail = ({id, img, name, description, price}) => {
                 <h1>{name}</h1>
                 <p>{description}</p>
                 <p>$ {price}</p>
-                <p>{itemCount}</p>
             </div>
         </div>
 

@@ -1,6 +1,6 @@
-import Item from './Item';
+import Item from '../item/Item';
 import { useParams } from "react-router-dom";
-import data from "./productos.json";
+import data from "../productos.json";
 import { useEffect, useState } from "react";
 
 const ItemList = ({items}) => {  

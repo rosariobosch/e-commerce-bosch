@@ -1,6 +1,6 @@
 
-import ItemList from "./ItemList";
-import Products from "./productos.json"
+import ItemList from "../itemList/ItemList";
+import Products from "../productos.json"
 import { useState } from 'react';
 
 const ItemListContainer = () => {

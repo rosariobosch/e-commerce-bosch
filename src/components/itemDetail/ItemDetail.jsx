@@ -1,8 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CartContext } from '../contexts/CartContext';
-import Cart from './Cart';
-import ItemCount from './ItemCount';
+import { CartContext } from '../../contexts/CartContext';
+import ItemCount from '../itemCount/ItemCount';
 
 const ItemDetail = ({id, img, name, description, price}) => {
 
@@ -16,11 +15,11 @@ const ItemDetail = ({id, img, name, description, price}) => {
     const handleAdd = (count) => {
         setIsVisible(false)
         setItemCount(count)
-        addItem(name, itemCount)
+        addItem(name, count, price)
     }
 
     const addItem = (name, quantity) => {
-        const item = {name: name, quantity: quantity}
+        const item = {name: name, quantity: quantity, price: price}
         setCart(currentCart => [...currentCart, item])
     }
 
@@ -31,6 +30,7 @@ const ItemDetail = ({id, img, name, description, price}) => {
                 <h1>{name}</h1>
                 <p>{description}</p>
                 <p>$ {price}</p>
+                <p>{itemCount}</p>
             </div>
         </div>
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
-import NavBar from './components/NavBar';
+import NavBar from './components/navBar/NavBar';
 import Home from './pages/Home';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import ItemListContainer from './components/ItemListContainer';
-import Cart from './components/Cart';
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
+import ItemListContainer from './components/itemListContainer/ItemListContainer';
+import Cart from './components/Cart/Cart';
 import CartProvider from './contexts/CartContext';
 // import { CartContext } from './contexts/CartContext';
 

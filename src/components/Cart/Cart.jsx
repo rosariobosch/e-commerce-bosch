@@ -4,7 +4,7 @@ import CartItem from "../CartItem/CartItem";
 const Cart = () => {
 
     const { cart } = useContext(CartContext);
-    const { removeItem } = useContext(CartContext)
+    const { removeItem, clearCart } = useContext(CartContext)
 
     const total = cart.map(product => {return product.price})
 
@@ -25,6 +25,8 @@ const Cart = () => {
             <div className="total">
                 <h3>Total: {total.reduce((acc, curr) => curr + acc, 0)}</h3>
             </div>
+
+            <button onClick={() => clearCart()} className="empty-btn">Vaciar carrito</button>
         </div>
 }
 

@@ -3,14 +3,15 @@ import { CartContext } from "../../contexts/CartContext";
 import CartItem from "../CartItem/CartItem";
 const Cart = () => {
 
-    const [cart, setCart] = useContext(CartContext)
+    const { cart } = useContext(CartContext);
+    const { removeItem } = useContext(CartContext)
 
     const total = cart.map(product => {return product.price})
 
-    const removeItem = (id) => {
-        let items = cart.filter(product => product.id !== id)
-        setCart([...items])
-    }
+    // const removeItem = (id) => {
+    //     let items = cart.filter(product => product.id !== id)
+    //     setCart([...items])
+    // }
 
     return  <div className="cart">
                 <div className="cart-title">

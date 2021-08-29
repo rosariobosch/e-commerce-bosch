@@ -8,9 +8,17 @@ const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([]);
 
+    const addItem = (name, quantity, price, id, img) => {
+        const item = {name: name, quantity: quantity, price: price*quantity, id: id, img: img}
+        setCart(currentCart => [...currentCart, item])
+    }
 
+    const removeItem = (id) => {
+        let items = cart.filter(product => product.id !== id)
+        setCart([...items])
+    }
 
-    return <CartContext.Provider value = {[cart, setCart]}>
+    return <CartContext.Provider value = {{cart, removeItem, addItem}}>
         {children}
     </CartContext.Provider>
 }

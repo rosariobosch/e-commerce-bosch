@@ -8,9 +8,9 @@ const ItemDetail = ({id, img, name, description, price}) => {
     const [isVisible, setIsVisible] = useState(true)
     const [itemCount, setItemCount] = useState(0)
 
-    const [cart, setCart] = useContext(CartContext)
+    const {addItem} = useContext(CartContext)
 
-    console.log(cart)
+    // console.log(cart)
 
     const handleAdd = (count) => {
         setIsVisible(false)
@@ -18,10 +18,10 @@ const ItemDetail = ({id, img, name, description, price}) => {
         addItem(name, count, price, id, img)
     }
 
-    const addItem = (name, quantity, price, id, img) => {
-        const item = {name: name, quantity: quantity, price: price*quantity, id: id, img: img}
-        setCart(currentCart => [...currentCart, item])
-    }
+    // const addItem = (name, quantity, price, id, img) => {
+    //     const item = {name: name, quantity: quantity, price: price*quantity, id: id, img: img}
+    //     setCart(currentCart => [...currentCart, item])
+    // }
 
     return <div className='item-detail' id={id}>
         <div className="detail">

@@ -18,11 +18,6 @@ const ItemDetail = ({id, img, name, description, price}) => {
         addItem(name, count, price, id, img)
     }
 
-    // const addItem = (name, quantity, price, id, img) => {
-    //     const item = {name: name, quantity: quantity, price: price*quantity, id: id, img: img}
-    //     setCart(currentCart => [...currentCart, item])
-    // }
-
     return <div className='item-detail' id={id}>
         <div className="detail">
             <img src={`../${img}`} alt="Imagen del producto"/>

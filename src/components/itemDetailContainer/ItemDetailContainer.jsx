@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+
 import ItemDetail from '../itemDetail/ItemDetail'
 import { useParams } from "react-router-dom";
 import data from "../productos.json";
-
+import { useEffect, useState } from "react";
+// import { getDocs, makeQuery, getCollection, setDoc } from '../../firebase/index';
 const ItemDetailContainer = ()=>{
 
     const [producto, setProducto] = useState({}) 

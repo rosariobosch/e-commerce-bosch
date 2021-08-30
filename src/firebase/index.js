@@ -1,7 +1,14 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { collection, getDocs } from "firebase/firestore";
+import {
+  collection as getCollectionFromFirebase,
+  setDoc as setDocFromFirebase,
+  getDocs as getDocsFromFirebase,
+  query,
+  where,
+  doc
+} from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -17,7 +24,24 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 const db = getFirestore();
 
-const querySnapshot = await getDocs(collection(db, "productos"));
-querySnapshot.forEach((doc) => {
-  console.log(`${doc.id} => ${doc.data()}`);
-})
+// const querySnapshot = await getDocs(collection(db, "productos"));
+// querySnapshot.forEach((doc) => {
+//   console.log(`${doc.id} => ${doc.data()}`);
+// });
+
+export const getCollection = name => {
+  return getCollectionFromFirebase(db, name);
+};
+
+export const getDocs = collection => {
+  return getDocsFromFirebase(collection);
+};
+
+export const setDoc = (obj, path, ...pathSegments) => {
+  return setDocFromFirebase(doc(db, path, ...pathSegments), obj);
+};
+
+export const makeQuery = (nameDb, field, condition, value) => {
+  const ref = getCollection(nameDb);
+  return query(ref, where(field, condition, value));
+};

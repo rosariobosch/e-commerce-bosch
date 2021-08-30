@@ -8,9 +8,7 @@ const ItemDetail = ({id, img, name, description, price}) => {
     const [isVisible, setIsVisible] = useState(true)
     const [itemCount, setItemCount] = useState(0)
 
-    const {addItem, isInCart} = useContext(CartContext)
-
-    // console.log(cart)
+    const {addItem} = useContext(CartContext)
 
     const handleAdd = (count) => {
         setIsVisible(false)

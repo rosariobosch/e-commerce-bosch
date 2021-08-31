@@ -8,12 +8,19 @@ const ItemDetail = ({id, img, name, description, price}) => {
     const [isVisible, setIsVisible] = useState(true)
     const [itemCount, setItemCount] = useState(0)
 
-    const {addItem} = useContext(CartContext)
+    const {addItem, isInCart} = useContext(CartContext)
 
     const handleAdd = (count) => {
         setIsVisible(false)
         setItemCount(count)
-        addItem(name, count, price, id, img)
+        let cartItem = isInCart(id)
+        if(cartItem == false) {
+            addItem(name, count, price, id, img)
+
+        } else {
+            console.log('El producto ya esta en el carrito')
+
+        }
     }
 
     return <div className='item-detail' id={id}>

@@ -8,6 +8,8 @@ const Cart = () => {
 
     const total = cart.map(product => {return product.price})
 
+    console.log(cart)
+
     return  <div className="cart">
                 <div className="cart-title">
                     <h2>Imagen</h2>

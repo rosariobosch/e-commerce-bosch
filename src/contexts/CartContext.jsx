@@ -15,10 +15,7 @@ const CartProvider = ({children}) => {
     }
 
     const isInCart = (id) => {
-       let item = cart.filter(element => element.id == id)
-       if (item) {
-           return true
-       }
+        return cart.find(cartItem => cartItem.id === id) !== undefined ? true : false
     }
 
 

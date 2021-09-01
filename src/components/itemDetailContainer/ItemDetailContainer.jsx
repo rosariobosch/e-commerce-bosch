@@ -1,33 +1,31 @@
 
 import ItemDetail from '../itemDetail/ItemDetail'
 import { useParams } from "react-router-dom";
-import data from "../productos.json";
 import { useEffect, useState } from "react";
-// import { getDocs, makeQuery, getCollection, setDoc } from '../../firebase/index';
+import { Firebase } from '../../firebase/index';
+
 const ItemDetailContainer = ()=>{
 
     const [producto, setProducto] = useState({}) 
+    const [itemDom, setItemDom] = useState();
     const {id} = useParams()
 
-    useEffect(()=>{
-        const productos = new Promise((resolve)=>{
-                setTimeout(()=>{
-                    resolve(data)
-                },100)
-            })
-            
-            productos.then((value)=>{
-                const producto = value.find(element => element.id == id)
-                setProducto(producto)
-            })
-    },[])
+    useEffect(() => {
+        Firebase.get(`productos/${id}`).then(res => {
+          const item = res.data();
+          setItemDom(
+            <ItemDetail
+              id={id}
+              name={item.name}
+              price={item.price}
+              img={item.img}
+              onUpdateCount={items => setProducto(items)}
+            />
+          );
+        });
+      }, []);
 
-
-    return (
-    <>
-        {producto ? <ItemDetail id={producto.id} name={producto.name} description={producto.description} price={producto.price} img={producto.img} /> : <h2>Cargando...</h2>}  
-    </>
-    )
+    return <>{itemDom}</>
 
 }
 

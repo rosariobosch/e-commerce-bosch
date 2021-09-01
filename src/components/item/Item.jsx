@@ -9,7 +9,7 @@ const Item = ({id, name, img, price}) => {
 
         return <div className='card' id={id}>
             <Link to={`/item-detail/${id}`}>
-            <img src={img} alt="Placeholder" className='product-img'/>
+            <img src={`../${img}`} alt="Placeholder" className='product-img'/>
             <h2 className='product-name'>{name}</h2>
             </Link>
 

@@ -8,13 +8,12 @@ import ItemDetailContainer from './components/itemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
 import Cart from './components/Cart/Cart';
 import CartProvider from './contexts/CartContext';
-// import { CartContext } from './contexts/CartContext';
+import Order from './components/order/Order';
 
 function App() {
   return <CartProvider>
   
     <BrowserRouter>
-
         <NavBar />
         <Switch>
             <Route exact path="/">
@@ -28,6 +27,9 @@ function App() {
             </Route>
             <Route exact path="/cart">
               <Cart />
+            </Route>
+            <Route exact path="/order">
+              <Order />
             </Route>
         </Switch>
         <Footer />

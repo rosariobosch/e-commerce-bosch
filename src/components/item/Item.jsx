@@ -1,4 +1,3 @@
-import ItemCount from '../itemCount/ItemCount'
 import { Link } from "react-router-dom";
 
 const Item = ({id, name, img, price}) => {
@@ -12,8 +11,9 @@ const Item = ({id, name, img, price}) => {
             <img src={`../${img}`} alt="Placeholder" className='product-img'/>
             <h2 className='product-name'>{name}</h2>
             </Link>
-
-            <ItemCount stock={5} initial={1} onAdd={handleAdd}/>
+            <Link to={`/item-detail/${id}`}>
+                <button>Ver detalle</button>
+            </Link>
 
             <h2 className="price">$ {price}</h2>
         </div>

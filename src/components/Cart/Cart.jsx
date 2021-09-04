@@ -1,14 +1,61 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
 import CartItem from "../CartItem/CartItem";
+import { Link } from "react-router-dom";
+import { Firebase } from "../../firebase";
+import { useState } from "react";
+import OrderForm from "../orderForm/OrderForm";
+
 const Cart = () => {
 
     const { cart } = useContext(CartContext);
-    const { removeItem, clearCart } = useContext(CartContext)
+    const { removeItem, clearCart } = useContext(CartContext);
 
     const total = cart.map(product => {return product.price})
 
-    console.log(cart)
+    const [name, setName] = useState();
+    const [phone, setPhone] = useState();
+    const [email, setEmail] = useState();
+
+    const [isFormComplete, setIsFormComplete] = useState(false)
+
+    const handleChange = () => {
+
+        setName(document.getElementById('name').value);
+        setPhone(document.getElementById('phone').value);
+        setEmail(document.getElementById('email').value);
+
+        console.log(name)
+        console.log(phone)
+        console.log(email)
+
+        if((name !== "" && name !== undefined) && phone !== "" && email !== "") {
+            setIsFormComplete(true)
+        } else {
+            setIsFormComplete(false)
+        }
+    }
+    
+    const handlePurchase = () => {
+        const newOrder = {
+          buyer: {
+            name: name,
+            phone: phone,
+            email: email
+          },
+          items: cart,
+          date: new Date().toString()
+        };
+        let totalPrice = 0;
+        cart.forEach(item => {
+          newOrder.items.push(item);
+          totalPrice = totalPrice + item.price;
+        });
+        newOrder['totalPrice'] = totalPrice;
+        console.log(newOrder);
+    
+        Firebase.add('orders', newOrder).then(res => console.log(res));
+      };
 
     return  <div className="cart">
                 <div className="cart-title">
@@ -29,6 +76,11 @@ const Cart = () => {
             </div>
 
             <button onClick={() => clearCart()} className="empty-btn">Vaciar carrito</button>
+
+            <OrderForm onChange={handleChange} />
+            <Link to="/order">
+            {isFormComplete ? <button onClick={handlePurchase}>Finalizar compra</button> : <h3>Completá el formulario</h3>}
+            </Link>
         </div>
 }
 

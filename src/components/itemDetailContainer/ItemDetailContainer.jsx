@@ -6,7 +6,7 @@ import { Firebase } from '../../firebase/index';
 
 const ItemDetailContainer = ()=>{
 
-    const [producto, setProducto] = useState({}) 
+    const [producto, setProducto] = useState({})
     const [itemDom, setItemDom] = useState();
     const {id} = useParams()
 
@@ -19,7 +19,6 @@ const ItemDetailContainer = ()=>{
               name={item.name}
               price={item.price}
               img={item.img}
-              onUpdateCount={items => setProducto(items)}
             />
           );
         });

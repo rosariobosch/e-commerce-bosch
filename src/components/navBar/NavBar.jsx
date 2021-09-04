@@ -9,7 +9,7 @@ const NavBar = () => {
         <Logo />
         <section className='menuItems'>
             <div className='menu'>
-                <MenuItem name='Productos' link='#' />
+                <MenuItem name='Productos' link='/' />
                 <MenuItem name='Contacto' link='#' />
                 <CartWidget />
             </div>

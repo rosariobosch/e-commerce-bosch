@@ -6,14 +6,13 @@ import { Firebase } from '../../firebase/index';
 
 const ItemDetailContainer = ()=>{
 
-    const [producto, setProducto] = useState({})
-    const [itemDom, setItemDom] = useState();
+    const [producto, setProducto] = useState()
     const {id} = useParams()
 
     useEffect(() => {
         Firebase.get(`productos/${id}`).then(res => {
           const item = res.data();
-          setItemDom(
+          setProducto(
             <ItemDetail
               id={id}
               name={item.name}
@@ -24,7 +23,7 @@ const ItemDetailContainer = ()=>{
         });
       }, []);
 
-    return <>{itemDom}</>
+    return <>{producto}</>
 
 }
 

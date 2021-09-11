@@ -25,10 +25,6 @@ const Cart = () => {
         setPhone(document.getElementById('phone').value);
         setEmail(document.getElementById('email').value);
 
-        console.log(name)
-        console.log(phone)
-        console.log(email)
-
         if((name !== "" && name !== undefined) && phone !== "" && email !== "") {
             setIsFormComplete(true)
         } else {
@@ -47,8 +43,12 @@ const Cart = () => {
           date: new Date().toString()
         };
         let totalPrice = 0;
+
         cart.forEach(item => {
-          newOrder.items.push(item);
+          if (!item.id) {
+            newOrder.items.push(item);
+          }
+          
           totalPrice = totalPrice + item.price;
         });
         newOrder['totalPrice'] = totalPrice;

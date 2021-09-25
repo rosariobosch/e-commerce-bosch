@@ -52,7 +52,6 @@ const Cart = () => {
           totalPrice = totalPrice + item.price;
         });
         newOrder['totalPrice'] = totalPrice;
-        console.log(newOrder);
     
         Firebase.add('orders', newOrder).then(res => console.log(res));
       };

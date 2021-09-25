@@ -29,7 +29,6 @@ const ItemListContainer = () => {
 
         if(category != null){
           const filteredArr=arr.filter(producto=> producto.props.category==category)
-          console.log(filteredArr)
           setProductos(filteredArr)
          } else {
           setProductos(arr)

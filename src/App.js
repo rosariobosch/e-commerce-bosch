@@ -9,6 +9,7 @@ import ItemListContainer from './components/itemListContainer/ItemListContainer'
 import Cart from './components/Cart/Cart';
 import CartProvider from './contexts/CartContext';
 import Order from './components/order/Order';
+import Contact from './components/contact/Contact';
 
 function App() {
   return <CartProvider>
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route exact path="/order">
               <Order />
+            </Route>
+            <Route exact path="/contacto">
+              <Contact />
             </Route>
         </Switch>
         <Footer />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Item = ({id, name, img, price}) => {
 
     const handleAdd = (count) => {
-        console.log(count);
+        
     }
 
         return <div className='card' id={id}>

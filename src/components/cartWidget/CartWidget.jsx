@@ -6,8 +6,6 @@ const CartWidget = () => {
     
     const {cart} = useContext(CartContext);
     const totalItems = cart.map(item => {return item.quantity})
-
-    console.log(totalItems)
     
     return <Link to="/cart"><div className='cartWidget'>
 

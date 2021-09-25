@@ -17,9 +17,6 @@ const ItemDetail = ({id, img, name, description, price}) => {
         if(cartItem == false) {
             addItem(name, count, price, id, img)
 
-        } else {
-            console.log('El producto ya esta en el carrito')
-
         }
     }
 

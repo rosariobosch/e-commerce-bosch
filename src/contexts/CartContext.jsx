@@ -10,8 +10,7 @@ const CartProvider = ({children}) => {
 
     const addItem = (name, quantity, price, id, img) => {
         const item = {name: name, quantity: quantity, price: price*quantity, id: id, img: img}
-        setCart(currentCart => [...currentCart, item])
-        console.log(cart)       
+        setCart(currentCart => [...currentCart, item])  
     }
 
     const isInCart = (id) => {

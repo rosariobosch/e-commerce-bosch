@@ -1,6 +1,7 @@
 import {MenuItem, MenuSubItem} from "../menuItems/MenuItems";
 import Logo from "../logo/Logo";
 import CartWidget from "../cartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -10,7 +11,9 @@ const NavBar = () => {
         <section className='menuItems'>
             <div className='menu'>
                 <MenuItem name='Productos' link='/' />
-                <MenuItem name='Contacto' link='#' />
+                <Link to="/contacto">
+                    <MenuItem name='Contacto' />
+                </Link>
                 <CartWidget />
             </div>
             <div className='subMenu'>

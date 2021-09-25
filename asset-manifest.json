@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/e-commerce-bosch/static/css/main.38ed3ffd.chunk.css",
+    "main.js": "/e-commerce-bosch/static/js/main.cb3ddb90.chunk.js",
+    "main.js.map": "/e-commerce-bosch/static/js/main.cb3ddb90.chunk.js.map",
+    "runtime-main.js": "/e-commerce-bosch/static/js/runtime-main.9dd1894d.js",
+    "runtime-main.js.map": "/e-commerce-bosch/static/js/runtime-main.9dd1894d.js.map",
+    "static/js/2.f1d26edb.chunk.js": "/e-commerce-bosch/static/js/2.f1d26edb.chunk.js",
+    "static/js/2.f1d26edb.chunk.js.map": "/e-commerce-bosch/static/js/2.f1d26edb.chunk.js.map",
+    "index.html": "/e-commerce-bosch/index.html",
+    "static/css/main.38ed3ffd.chunk.css.map": "/e-commerce-bosch/static/css/main.38ed3ffd.chunk.css.map",
+    "static/js/2.f1d26edb.chunk.js.LICENSE.txt": "/e-commerce-bosch/static/js/2.f1d26edb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9dd1894d.js",
+    "static/js/2.f1d26edb.chunk.js",
+    "static/css/main.38ed3ffd.chunk.css",
+    "static/js/main.cb3ddb90.chunk.js"
+  ]
+}

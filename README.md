@@ -8,7 +8,7 @@ https://retro-studios.surge.sh
 
 ## 💻 Installation
 
-First, clone this repository. You will need to install npm to run the project.
+First, clone this repository. You will then need to install npm to run the project.
 
 Installation:
 
@@ -22,4 +22,4 @@ To build the app for production to the build folder:
 
 `npm run build`
 
-![example.png](example.png);
+![example.png](example.png)

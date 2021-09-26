@@ -6,6 +6,8 @@ This project was created as part of a React Js course. It consists of a store th
 
 https://retro-studios.surge.sh
 
+![example.png](example.png)
+
 ## 💻 Installation
 
 First, clone this repository. You will then need to install npm to run the project.
@@ -21,5 +23,3 @@ To Start Server:
 To build the app for production to the build folder:
 
 `npm run build`
-
-![example.png](example.png)

@@ -8,7 +8,7 @@ https://retro-studios.surge.sh
 
 ![example.png](example.png)
 
-## 💻 Installation
+## 💻 Getting Started
 
 First, clone this repository. You will then need to install npm to run the project.
 
